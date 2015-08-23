@@ -2,7 +2,7 @@
 A lightweight possibility to  preview single images and display entire galleries. Aka a basic fancybox clone. Uses plain javascript, no dependencies. 
 
 ## Usage
-In order to use imagePreview.js, download the js, the css and the png files and include them in your page:
+In order to use imagePreview.js, download the js, the css and the png files and include the js and css ones in your page:
 
 ````html
 <link rel="stylesheet" type="text/css" href="imagePreview.css">
