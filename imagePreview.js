@@ -7,7 +7,7 @@
 *	The (optional) launcher element needs to have the id "imagePreviewLauncher".
 *
 *	Pass the Gallerymode you wish to use as a parameter (see below). Default is individual pictures.
-*	As a second parameter you can specify if you would not like to use the window.load event to initialize imagePreview. This can be helpful if you call imagePreview after the document has loaded.
+*	As an optional second parameter you can specify if you would not like to use the window.load event to initialize imagePreview. This can be helpful if you call imagePreview after the document has loaded.
 *	
 *
 *	Example code (within <head>):
@@ -17,6 +17,11 @@
 *	<script type="text/javascript">
 *		imagePreview(Gallerymode.INDIVIDUAL_PICTURES);
 *	</script>
+*	
+*	Copyright 2015 Adrian Wirth
+*	Released under the MIT license
+*
+*	Date: 2015-08-23
 */
 
 var Gallerymode = {
