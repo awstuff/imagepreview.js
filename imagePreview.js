@@ -90,6 +90,7 @@ function imagePreview (gallerymode, notOnWinLoad) {
 		var container = document.getElementById("imagePreviewContainer");	// important: there's a reason the imgContainer variable isn't used here
 		if (!container) {return;}
 		body.removeChild(container);
+		body.style.overflow = "";
 		isFirstImageToBeShown = true;
 	}
 
@@ -205,6 +206,7 @@ function imagePreview (gallerymode, notOnWinLoad) {
 			renderControls(toGoIndex);
 		};
 		var pageHeight = Math.max(body.scrollHeight, body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+		body.style.overflow = "hidden";
 		var overlay = document.createElement("div");
 		overlay.setAttribute("id", "imagePreviewOverlay");
 		overlay.style.height = pageHeight + "px";
