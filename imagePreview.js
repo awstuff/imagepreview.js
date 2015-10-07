@@ -8,7 +8,7 @@
 *
 *	Pass the Gallerymode you wish to use as a parameter (see below). Default is individual pictures.
 *	As an optional second parameter you can specify if you would not like to use the window.load event to initialize imagePreview. This can be helpful if you call imagePreview after the document has loaded.
-*	
+*
 *
 *	Example code (within <head>):
 *
@@ -17,7 +17,7 @@
 *	<script type="text/javascript">
 *		imagePreview(Gallerymode.INDIVIDUAL_PICTURES);
 *	</script>
-*	
+*
 *	Copyright 2015 Adrian Wirth
 *	Released under the MIT license
 *
@@ -27,7 +27,7 @@
 var Gallerymode = {
 	INDIVIDUAL_PICTURES: 0,	// clicking on one of the pictures opens the gallery
 	GALLERY_ONLY: 1	// the only way of opening the gallery is clicking the launcher
-}
+};
 
 function imagePreview (gallerymode, notOnWinLoad) {
 	if (gallerymode === void 0 || gallerymode === null || isNaN(gallerymode) || gallerymode > 1 || gallerymode < 0) {
@@ -82,7 +82,7 @@ function imagePreview (gallerymode, notOnWinLoad) {
 	*/
 	function closePreview () {
 		var overlay = document.getElementById("imagePreviewOverlay");
-		if (!overlay) {return;}		
+		if (!overlay) {return;}
 		overlay.style.opacity = 0;
 		setTimeout(function () {	// wait for the opacity transition of the overlay to be over
 			body.removeChild(overlay);
@@ -92,6 +92,13 @@ function imagePreview (gallerymode, notOnWinLoad) {
 		body.removeChild(container);
 		body.style.overflow = "";
 		isFirstImageToBeShown = true;
+	}
+
+	/*
+	*	Obtains the image url of the specified element, if possible by taking the src attribute, otherwise by taking (and trimming) the css backgroundImage
+	*/
+	function getSrc (element) {
+		return element.src || element.style.backgroundImage.slice(4, -1).replace(/"|'/g, "");
 	}
 
 	/*
@@ -196,13 +203,13 @@ function imagePreview (gallerymode, notOnWinLoad) {
 		var previousHandler = function () {	// move to the previous image
 			if (!isValidIndex(toGoIndex - 1)) {return;}
 			toGoIndex--;
-			renderImage(sourceImages[toGoIndex].src);
+			renderImage(getSrc(sourceImages[toGoIndex]));
 			renderControls(toGoIndex);
 		};
 		var nextHandler = function () {	// move to the next image
 			if (!isValidIndex(toGoIndex + 1)) {return;}
 			toGoIndex++;
-			renderImage(sourceImages[toGoIndex].src);
+			renderImage(getSrc(sourceImages[toGoIndex]));
 			renderControls(toGoIndex);
 		};
 		var pageHeight = Math.max(body.scrollHeight, body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
@@ -247,7 +254,7 @@ function imagePreview (gallerymode, notOnWinLoad) {
 		overlay.style.opacity = 0;
 		setTimeout(function () {	// weird hack for the opacity transition of the overlay to work
 			overlay.style.opacity = 0.7;
-			renderImage(e.src);
+			renderImage(getSrc(e));
 			renderControls(Array.prototype.indexOf.call(sourceImages, e));
 			imgContainer.style.visibility = "";
 			imgContainer.focus();
