@@ -29,10 +29,10 @@
 	outline:0;
 	right:0;
 	top:0;
-	-o-transition:min-width 0.25s ease, max-width 0.25s ease;
-	-moz-transition:min-width 0.25s ease, max-width 0.25s ease;
-	-webkit-transition:min-width 0.25s ease, max-width 0.25s ease;
-	transition:min-width 0.25s ease, max-width 0.25s ease;
+	-o-transition:min-width 0.25s ease, max-width 0.25s ease,min-height 0.25s ease, max-height 0.25s ease;
+	-moz-transition:min-width 0.25s ease, max-width 0.25s ease,min-height 0.25s ease, max-height 0.25s ease;
+	-webkit-transition:min-width 0.25s ease, max-width 0.25s ease,min-height 0.25s ease, max-height 0.25s ease;
+	transition:min-width 0.25s ease, max-width 0.25s ease,min-height 0.25s ease, max-height 0.25s ease;
 	z-index:9991;
 }
 
@@ -45,7 +45,7 @@
 
 #imagePreviewContainer #imagePreviewCloseBox {
 	background-color:transparent;
-	background-image:url("ipClose_45.png");
+	background-image:url("../assets/ipClose_45.png");
 	background-size:30px;
 	cursor:pointer;
 	height:30px;
@@ -75,7 +75,7 @@
 }
 
 #imagePreviewContainer #imagePreviewPrevious:hover {
-	background-image:url("ipPrevious_45.png");
+	background-image:url("../assets/ipPrevious_45.png");
 }
 
 #imagePreviewContainer #imagePreviewNext {
@@ -85,5 +85,5 @@
 }
 
 #imagePreviewContainer #imagePreviewNext:hover {
-	background-image:url("ipNext_45.png");
+	background-image:url("../assets/ipNext_45.png");
 }
