@@ -87,7 +87,3 @@
 #imagePreviewContainer #imagePreviewNext:hover {
 	background-image:url("ipNext_45.png");
 }
-
-#imagePreviewLauncher:hover {
-	color:red;
-}
