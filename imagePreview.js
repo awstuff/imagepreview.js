@@ -6,7 +6,7 @@
 *	The actual image elements need to have the css class "imagePreviewSource" assigned to them.
 *	The (optional) launcher element needs to have the id "imagePreviewLauncher".
 *
-*	Pass the Gallerymode you wish to use as a parameter (see below). Default is individual pictures.
+*	Pass the mode you wish to use as a parameter (see below). Default is launching the gallery by clicking on an external launcher element (first parameter is false). Alternatively (and probably preferably) you can pass true as a first parameter in order to be able to launch the gallery by clicking the individual image elements.
 *	As an optional second parameter you can specify if you would not like to use the window.load event to initialize imagePreview. This can be helpful if you call imagePreview after the document has loaded.
 *
 *
@@ -15,7 +15,7 @@
 *	<link rel="stylesheet" type="text/css" href="imagePreview.css">
 *	<script type="text/javascript" src="imagePreview.js"></script>
 *	<script type="text/javascript">
-*		imagePreview(Gallerymode.INDIVIDUAL_PICTURES);
+*		imagePreview(false);
 *	</script>
 *
 *	Copyright 2015 Adrian Wirth
@@ -24,14 +24,9 @@
 *	Date: 2015-08-23
 */
 
-var Gallerymode = {
-	INDIVIDUAL_PICTURES: 0,	// clicking on one of the pictures opens the gallery
-	GALLERY_ONLY: 1	// the only way of opening the gallery is clicking the launcher
-};
-
-function imagePreview (gallerymode, notOnWinLoad) {
-	if (gallerymode === void 0 || gallerymode === null || isNaN(gallerymode) || gallerymode > 1 || gallerymode < 0) {
-		gallerymode = Gallerymode.INDIVIDUAL_PICTURES;
+function imagePreview (launcherOnly, notOnWinLoad) {
+	if (launcherOnly !== true) {
+		launcherOnly = false;
 	}
 	if (notOnWinLoad !== true) {
 		notOnWinLoad = false;
@@ -56,7 +51,7 @@ function imagePreview (gallerymode, notOnWinLoad) {
 	var initialize = function () {
 		sourceImages = document.getElementsByClassName("imagePreviewSource");
 		body = document.getElementsByTagName("body")[0];
-		if (gallerymode === Gallerymode.INDIVIDUAL_PICTURES) {
+		if (launcherOnly === false) {
 			for (var i = 0; i < sourceImages.length; i++) {
 				sourceImages[i].addEventListener("click", function () {
 					showPreview(this);
