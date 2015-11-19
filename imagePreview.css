@@ -45,7 +45,7 @@
 
 #imagePreviewContainer #imagePreviewCloseBox {
 	background-color:transparent;
-	background-image:url("../assets/ipClose_45.png");
+	background-image:url("ipClose_45.png");
 	background-size:30px;
 	cursor:pointer;
 	height:30px;
@@ -58,7 +58,7 @@
 
 #imagePreviewContainer #imagePreviewPrevious,
 #imagePreviewContainer #imagePreviewNext {
-	background-color:rgba(0,0,0,0);		/*Fix fuer IE9 und 10*/
+	background-color:rgba(0,0,0,0);		/* fix for ie9 and 10 */
 	background-repeat:no-repeat;
 	background-size:30px;
 	cursor:pointer;
@@ -75,7 +75,7 @@
 }
 
 #imagePreviewContainer #imagePreviewPrevious:hover {
-	background-image:url("../assets/ipPrevious_45.png");
+	background-image:url("ipPrevious_45.png");
 }
 
 #imagePreviewContainer #imagePreviewNext {
@@ -85,5 +85,5 @@
 }
 
 #imagePreviewContainer #imagePreviewNext:hover {
-	background-image:url("../assets/ipNext_45.png");
+	background-image:url("ipNext_45.png");
 }
