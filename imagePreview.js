@@ -20,8 +20,6 @@
 *
 *	Copyright 2015 Adrian Wirth
 *	Released under the MIT license
-*
-*	Date: 2015-08-23
 */
 
 function imagePreview (launcherOnly, notOnWinLoad) {
