@@ -14,7 +14,7 @@ In order to use imagePreview.js, download the js, the css and the png files and 
 
 You need to assign the CSS class `imagePreviewSource` to the `img` elements you wish to use for the preview / gallery.
 
-Optionally, you can specify an external launcher element, such as a button, which launches the gallery (duh), by setting its id to `imagePreviewLauncher`.
+Optionally, you can specify an external launcher element, such as a button, which launches the gallery on click, by setting its id to `imagePreviewLauncher`.
 
 It is possible to deactivate that clicking the individual `img` elements themselves lauches the gallery, if you wish to go external-launcher-only. To do so, pass `true` as a parameter to `imagePreview` (or just omit the parameter). If you pass `true`, clicking the pictures themselves will launch the gallery as well, as I already mentioned.
 
