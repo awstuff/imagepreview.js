@@ -8,7 +8,7 @@ In order to use imagePreview.js, download the js, the css and the png files and 
 <link rel="stylesheet" type="text/css" href="imagePreview.css">
 <script type="text/javascript" src="imagePreview.js"></script>
 <script type="text/javascript">
-    imagePreview(false);
+    imagePreview();
 </script>
 ````
 
