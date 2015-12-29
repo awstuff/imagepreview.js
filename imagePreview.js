@@ -1,13 +1,6 @@
 /**
 *	imagePreview - A simple function for creating a nice popup view and gallery of images, aka a basic fancybox clone.
 *	No dependencies, just plain native js
-*	==================================================================================================================
-*
-*	The actual image elements need to have the css class "imagePreviewSource" assigned to them.
-*	The (optional) launcher element needs to have the id "imagePreviewLauncher".
-*
-*	Pass the mode you wish to use as a parameter (see below). Default is launching the gallery by clicking on an external launcher element (first parameter is false). Alternatively (and probably preferably) you can pass true as a first parameter in order to be able to launch the gallery by clicking the individual image elements.
-*	As an optional second parameter you can specify if you would not like to use the window.load event to initialize imagePreview. This can be helpful if you call imagePreview after the document has loaded.
 *
 *
 *	Example code (within <head>):
