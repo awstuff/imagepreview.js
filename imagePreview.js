@@ -1,18 +1,9 @@
 /**
- *	imagePreview - A simple function for creating a nice popup view and gallery of images, aka a basic fancybox clone.
- *	No dependencies, just plain native js
+ * A lightweight possibility to display images and galleries. Inspired by fancybox. Uses plain javascript, no dependencies.
  *
- *
- *	Example code (within <head>):
- *
- *	<link rel="stylesheet" type="text/css" href="imagePreview.css">
- *	<script type="text/javascript" src="imagePreview.js"></script>
- *	<script type="text/javascript">
- *		imagePreview(false);
- *	</script>
- *
- *	Copyright 2016 Adrian Wirth
- *	Released under the MIT license
+ * Copyright 2016 Adrian Wirth
+ * Released under the MIT license
+ * https://github.com/awstuff/imagePreview.js
  */
 
 function imagePreview (launcherOnly, notOnWinLoad) {

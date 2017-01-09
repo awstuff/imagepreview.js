@@ -1,3 +1,11 @@
+/**
+ * A lightweight possibility to display images and galleries. Inspired by fancybox. Uses plain javascript, no dependencies.
+ *
+ * Copyright 2016 Adrian Wirth
+ * Released under the MIT license
+ * https://github.com/awstuff/imagePreview.js
+ */
+
 @charset "UTF-8";
 
 .imagePreviewSource {
